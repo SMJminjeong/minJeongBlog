@@ -14,20 +14,6 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   organizationName: 'SMJminjeong', // Usually your GitHub org/user name.
   projectName: 'minJeongBlog', // Usually your repo name.
 
-  customFields: {
-    i18n: {
-      defaultLocale: 'ko',
-      locales: ['ko', 'en'],
-      localeConfigs: {
-        ko: {
-          htmlLang: 'ko-KR',
-        },
-        en: {
-          htmlLang: 'en-US',
-        },
-      },
-    },
-  },
 
   presets: [
     [
