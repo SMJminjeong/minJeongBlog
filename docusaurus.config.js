@@ -6,13 +6,28 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 (module.exports = {
   title: 'My Site',
   tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://SMJminjeong.com',
+  baseUrl: '/minJeongBlog/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'SMJminjeong', // Usually your GitHub org/user name.
+  projectName: 'minJeongBlog', // Usually your repo name.
+
+  customFields: {
+    i18n: {
+      defaultLocale: 'ko',
+      locales: ['ko', 'en'],
+      localeConfigs: {
+        ko: {
+          htmlLang: 'ko-KR',
+        },
+        en: {
+          htmlLang: 'en-US',
+        },
+      },
+    },
+  },
 
   presets: [
     [
@@ -22,7 +37,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
+          routeBasePath: '/',
         },
         blog: {
           showReadingTime: true,
@@ -55,7 +70,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/SMJminjeong',
             label: 'GitHub',
             position: 'right',
           },
@@ -63,48 +78,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} minJeongBlog, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
